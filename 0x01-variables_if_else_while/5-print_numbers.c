@@ -4,15 +4,15 @@
  *
  * Description: using the main function
  * this program prints "Programming is positive, zero, or negative
- * Return: Always 0 (success/correct)
+ * Return: Always 0 (success)
  */
 int main(void)
 {
-	int i;
-	for (i = 0; i < 10; i++)
+	int a;
+	for (a = 0; i < 10; a++)
 	{
-		printf("%i", i);
+		printf("%d", a);
 	}
-	printf("\n");
+	printf('\n');
 	return (0);
 }
