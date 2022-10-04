@@ -1,32 +1,19 @@
-#include "main.h"
+#include "notrebloh.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <limits.h>
 
 /**
- * _strdup -> string duplicator function
- * @str: string to be dupliated
- * Return: a string pointer
+ * *malloc_checked - allocate memory with malloc
+ * @b: unsigned int type
+ * Return: return pointer
  */
-
-char *_strdup(char *str)
+void *malloc_checked(unsigned int b)
 {
-	int i = 1, j = 0;
-	char *s;
+	int *ptr;
 
-	if (str == NULL)
-		return (NULL);
-
-	while (str[i])
-		i++;
-
-	s = (char *)malloc(i * sizeof(char) + 1);
-	if (s == NULL)
-		return (NULL);
-	while (j < i)
-	{
-		s[j] = str[j];
-		j++;
-
-	}
-
-	s[j] = '\0';
-	return (s);
+	ptr = malloc(b);
+	if (ptr == NULL)
+		exit(98);
+	return (ptr);
 }
