@@ -1,10 +1,9 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-/**
- * File: MAIN.h
- */
-
+void _puts(char *str);
+void print_int(unsigned long int n);
+int _atoi(const char *s);
 int _putchar(char c);
 void *malloc_checked(unsigned int b);
 char *string_nconcat(char *s1, char *s2, unsigned int n);
