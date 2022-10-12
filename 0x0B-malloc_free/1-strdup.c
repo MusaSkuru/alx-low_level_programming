@@ -1,19 +1,31 @@
-#include "notrebloh.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <limits.h>
-
 /**
- * *malloc_checked - allocate memory with malloc
- * @b: unsigned int type
- * Return: return pointer
+ * _strdup - malloc new str and copy *str into it
+ * @str: the string we copy
+ * Return: pointer to new string
  */
-void *malloc_checked(unsigned int b)
+char *_strdup(char *str)
 {
-	int *ptr;
-
-	ptr = malloc(b);
-	if (ptr == NULL)
-		exit(98);
-	return (ptr);
+        unsigned int i;
+        int count = 0;
+        char *dest;
+        if (str == NULL)
+                return (NULL);
+        for (i = 0; str[i]; i++)
+        {
+                count++;
+        }
+        count += 1;
+        dest = malloc(count * sizeof(char));
+        if (dest == NULL)
+        {
+                return (NULL);
+        }
+        for (i = 0; str[i] != '\0'; i++)
+        {
+                dest[i] = str[i];
+        }
+        dest[i] = str[i];
+        return (dest);
 }
